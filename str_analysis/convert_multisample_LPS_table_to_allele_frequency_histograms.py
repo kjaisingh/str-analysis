@@ -90,7 +90,8 @@ def compute_row(locus_id, motif, allele_sizes, alleles_by_sample_id):
                 found_locus_id = specific_locus_id
                 break
         else:
-            raise ValueError(f"Couldn't resolve locus id for motif {motif} in {locus_id}")
+            print(f"Warning: Couldn't resolve locus id for motif {motif} in {locus_id}. Skipping.")
+            return None
 
         locus_id = found_locus_id
 
